@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Health Unit";
+}
+
+@section header_content
+{
+    <!-- Page Heading Starts -->
+    <div class="container">
+        <h1 class="page-heading text-xs-center text-sm-center text-md-left">Health Unit</h1>
+    </div>
+    <!-- Page Heading Ends -->
+}
+
+<!-- Breadcrumb Starts -->
+<div class="container">
+    <ol class="breadcrumb justify-content-center justify-content-md-start">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item active">Health Unit</li>
+    </ol>
+</div>
+<!-- Breadcrumb Ends -->
+
+<!-- Main Container Starts -->
+<div class="main-container container text-xs-center text-sm-center text-md-left">
+    <!-- Home Welcome Section Starts -->
+    <section class="home-welcome-section">
+        <!-- Heading Starts -->
+        <h2 class="heading-1 text-xs-center text-sm-center text-md-left text-weight-light"><strong>Your Health</strong> is Our First Priority</h2>
+        <!-- Heading Ends -->
+        <!-- Spacer Starts -->
+        <div class="spacer-small"></div>
+        <!-- Spacer Ends -->
+        <!-- Nested Row Starts -->
+        <div class="row">
+            <!-- Welcome Content Starts -->
+            <div class="col-md-6 col-sm-12">
+                <div class="content-1">
+                    <p>The health unit consists of a network of <strong>health care providers who function as a cohesive multidisciplinary health care unit</strong> for those affected people. This multidisciplinary health care unit consists of a team of various professionals including a paediatrician, a neuropaediatrician, a general practitioner, a psychologist, an occupational health practitioner, a social worker, physiotherapists, audiologist, optometrists, speech therapists, physical therapists, a nurse and a paediatric surgeon.</p>
+                    
+                </div>
+            </div>
+            <!-- Welcome Content Ends -->
+            <!-- Spacer For Mobile Starts -->
+            <div class="w-100 d-xs-block d-sm-block d-md-none">
+                <div class="spacer-extra-large"></div>
+            </div>
+            <!-- Spacer For Mobile Ends -->
+            <!-- Welcome Image Starts -->
+            <div style="text-align:center;" class="col-md-6 col-sm-12">
+                <img src="~/Content/images/about/health-unit.jpg" alt="Map" class="img-fluid img-center">
+            </div>
+            <!-- Welcome Image Ends -->
+        </div>
+        <!-- Nested Row Ends -->
+    </section>
+    <!-- Home Welcome Section Ends -->
+</div>
+<!-- Main Container Ends -->
+
+@section scripts
+{
+    <script type="text/javascript">
+        // Change active nav link
+        $(document).ready(function () {
+            $('#about-nav-item').addClass('active');
+        });
+    </script>
+}

@@ -1,0 +1,83 @@
+﻿ol.how-does-it-work {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol.how-does-it-work li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 50%;
+  font-size: 0.8rem;
+  padding-right: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+ol.how-does-it-work li::before {
+  content: "0" counter(my-awesome-counter);
+  color: #196bab;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  line-height: 1.2;
+}
+
+
+/* styles for '...' */ 
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 4.8em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  /*margin-right: -1em;*/
+  padding-right: 1em;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}
+
+
+.home-testimonial-box > p {
+    min-height: 160px;
+}
+
+.main-header {
+	padding-bottom: 30px;
+	background-image: url(../Content/images/main-banner-img1.jpg);
+    background-position: center;
+    background-position-y:bottom;
+}
+
+
+.pagination-container {
+    margin-top: unset;
+}

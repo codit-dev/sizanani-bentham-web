@@ -1,0 +1,305 @@
+﻿@model SizananiBentham.Models.ArticleViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@section header_content
+{
+    <!-- Page Heading Starts -->
+    <div class="container">
+        <h1 class="page-heading text-xs-center text-sm-center text-md-left">Article</h1>
+    </div>
+    <!-- Page Heading Ends -->
+}
+
+<!-- Breadcrumb Starts -->
+<div class="container">
+    <ol class="breadcrumb justify-content-center justify-content-md-start">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Articles","News")">News and Publications</a></li>
+        <li class="breadcrumb-item active">@Model.Title</li>
+    </ol>
+</div>
+<!-- Breadcrumb Ends -->
+
+<!-- Main Container Starts -->
+<div class="main-container alt container">
+    <!-- Nested Row Starts -->
+    <div class="row">
+        <!-- Mainarea Starts -->
+        <div class="col-md-8 col-sm-12">
+            <!-- Blog Single Post Starts -->
+            <article class="blog-post single">
+                <!-- Blog Media Starts -->
+                <div class="blog-media">
+                    <img src="@Model.ImageFilePath" alt="@Model.Title" class="img-fluid">
+                </div>
+                <!-- Blog Media Ends -->
+                <!-- Blog Title Starts -->
+                <h4 class="blog-title">@Model.Title</h4>
+                <!-- Blog Title Ends -->
+                <!-- Blog Post Info Starts -->
+                <ul class="blog-post-info list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <i class="fa fa-user"></i>
+                        <a href="#">By @Model.Author</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fa fa-calendar-o"></i>
+                        Posted on @Model.PublishMonth @Model.PublishDay, @Model.PublishYear
+                    </li>
+                </ul>
+                <!-- Blog Post Info Ends -->
+                <!-- Blog Post Content Starts -->
+                <div class="blog-post-content">
+                   @Html.Raw(Model.Body)
+                </div>
+                <!-- Blog Post Content Ends -->
+                <!-- Starts -->
+                @*<div class="clearfix">
+                    <!-- Tags Starts -->
+                    <ul class="list-unstyled list-inline blog-post-tags float-md-left">
+                        <li class="list-inline-item"><h6>Tags: </h6></li>
+                        <li class="list-inline-item"><i class="fa fa-tag"></i> <a href="#">Hospital</a></li>
+                        <li class="list-inline-item"><i class="fa fa-tag"></i> <a href="#">Medical</a></li>
+                        <li class="list-inline-item"><i class="fa fa-tag"></i> <a href="#">Care</a></li>
+                    </ul>
+                    <!-- Tags Ends -->
+                    <!-- Share Starts -->
+                    <ul class="list-unstyled list-inline blog-post-share float-md-right">
+                        <li class="list-inline-item"><h6>Share: </h6></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+                    </ul>
+                    <!-- Share Ends -->
+                </div>*@
+                <!-- Ends -->
+            </article>
+            <!-- Blog Single Post Ends -->
+            <!-- Author Bio Starts -->
+            @*<div class="blog-author-bio">
+                <!-- Nested Row Starts -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-12 author-bio-img text-center">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="w-100 d-xs-block d-sm-block d-md-none"><br></div>
+                    <div class="col-lg-10 col-md-9 col-sm-12">
+                        <h6><a href="#">Sainath Chillapuram</a></h6>
+                        <p class="text-justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <ul class="list-unstyled list-inline author-sm-links animation">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Nested Row Ends -->
+            </div>*@
+            <!-- Author Bio Ends -->
+            <!-- User Comments Display Starts -->
+            @*<div class="user-comments-area">
+                <!-- Heading Starts -->
+                <h4 class="heading-1 text-xs-center text-sm-center text-md-left text-weight-bold">2 Comments</h4>
+                <!-- Heading Ends -->
+                <!-- Spacer Starts -->
+                <div class="spacer-extra-small"></div>
+                <!-- Spacer Ends -->
+                <!-- Comment #1 Starts -->
+                <div class="media comment-box">
+                    <a class="float-left" href="#">
+                        <img class="media-object" src="images/avatar/avatar-1.png" alt="Avatar">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading">Puram</h6>
+                        <p class="clearfix">
+                            <a href="#" class="date float-left">24 Feb, 2018 at 3:30pm</a>
+                            <a href="#" class="btn btn-link flat animation float-right">Reply</a>
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </div>
+                <!-- Comment #1 Ends -->
+                <!-- Comment #2 Starts -->
+                <div class="media comment-box">
+                    <a class="float-left" href="#">
+                        <img class="media-object" src="images/avatar/avatar-1.png" alt="Avatar">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading">Puram</h6>
+                        <p class="clearfix">
+                            <a href="#" class="date float-left">24 Feb, 2018 at 3:30pm</a>
+                            <a href="#" class="btn btn-link flat animation float-right">Reply</a>
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </div>
+                <!-- Comment #2 Ends -->
+                <!-- Comment #3 Starts -->
+                <div class="media comment-box">
+                    <a class="float-left" href="#">
+                        <img class="media-object" src="images/avatar/avatar-1.png" alt="Avatar">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading">Puram</h6>
+                        <p class="clearfix">
+                            <a href="#" class="date float-left">24 Feb, 2018 at 3:30pm</a>
+                            <a href="#" class="btn btn-link flat animation float-right">Reply</a>
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </div>
+                <!-- Comment #3 Ends -->
+            </div>*@
+            <!-- User Comments Display Ends -->
+            <!-- Comments Form Starts -->
+            @*<div class="blog-comments-form">
+                <!-- Heading Starts -->
+                <h4 class="heading-1 text-xs-center text-sm-center text-md-left text-weight-bold">Leave A Comment</h4>
+                <!-- Heading Ends -->
+                <!-- Nested Row Starts -->
+                <div class="row">
+                    <!-- Left Col Starts -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control flat animation" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control flat animation" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control flat animation" placeholder="Phone">
+                        </div>
+                    </div>
+                    <!-- Left Col Ends -->
+                    <!-- Right Col Starts -->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <textarea class="form-control flat animation" rows="7" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <!-- Right Col Ends -->
+                    <!-- Submit Buttons Starts -->
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-main flat animation" value="Submit Comment">
+                    </div>
+                    <!-- Submit Buttons Ends -->
+                </div>
+                <!-- Nested Row Ends -->
+            </div>*@
+            <!-- Comments Form Ends -->
+        </div>
+        <!-- Mainarea Ends -->
+        <!-- Spacer For Mobile Starts -->
+        <div class="w-100 d-xs-block d-sm-block d-md-none">
+            <div class="spacer-extra-large"></div>
+        </div>
+        <!-- Spacer For Mobile Ends -->
+        <!-- Sidearea Starts -->
+        @*<div class="col-md-4 col-sm-12">
+            <!-- Search Starts -->
+            <div class="search-box-1">
+                <div class="input-group">
+                    <input type="text" class="form-control flat" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn flat" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Ends -->
+            <!-- Spacer Starts -->
+            <div class="spacer-extra-small"></div>
+            <!-- Spacer Ends -->
+            <!-- Categories Starts -->
+            <h4 class="side-heading-2 text-brand-color">Categories</h4>
+            <ul class="list-unstyled side-list-1">
+                <li><a href="#">Heart</a></li>
+                <li><a href="#">Cardiology</a></li>
+                <li><a href="#">Patient</a></li>
+                <li><a href="#">Dental</a></li>
+                <li><a href="#">Leaser</a></li>
+            </ul>
+            <!-- Categories Ends -->
+            <!-- Spacer Starts -->
+            <div class="spacer-extra-small"></div>
+            <!-- Spacer Ends -->
+            <!-- Popular Posts Starts -->
+            <h4 class="side-heading-2 text-brand-color">Popular Posts</h4>
+            <ul class="list-unstyled list-post-1">
+                <li class="clearfix">
+                    <img src="images/misc/blog-thumb-img1.jpg" alt="Image" class="img-fluid float-left">
+                    <p><a href="#">It was popularised in the 1960s with the release of Letraset sheets.</a></p>
+                    <span class="text-brand-color">17 Dec, 2017</span>
+                </li>
+                <li class="clearfix">
+                    <img src="images/misc/blog-thumb-img2.jpg" alt="Image" class="img-fluid float-left">
+                    <p><a href="#">It was popularised in the 1960s with the release of Letraset sheets.</a></p>
+                    <span class="text-brand-color">17 Dec, 2017</span>
+                </li>
+                <li class="clearfix">
+                    <img src="images/misc/blog-thumb-img3.jpg" alt="Image" class="img-fluid float-left">
+                    <p><a href="#">It was popularised in the 1960s with the release of Letraset sheets.</a></p>
+                    <span class="text-brand-color">17 Dec, 2017</span>
+                </li>
+                <li class="clearfix">
+                    <img src="images/misc/blog-thumb-img4.jpg" alt="Image" class="img-fluid float-left">
+                    <p><a href="#">It was popularised in the 1960s with the release of Letraset sheets.</a></p>
+                    <span class="text-brand-color">17 Dec, 2017</span>
+                </li>
+            </ul>
+            <!-- Popular Posts Ends -->
+            <!-- Spacer Starts -->
+            <div class="spacer-extra-small"></div>
+            <!-- Spacer Ends -->
+            <!-- Archive Starts -->
+            <h4 class="side-heading-2 text-brand-color">Archive</h4>
+            <ul class="list-unstyled side-list-1">
+                <li><a href="#">March 2018</a></li>
+                <li><a href="#">February 2018</a></li>
+                <li><a href="#">January 2018</a></li>
+                <li><a href="#">December 2017</a></li>
+                <li><a href="#">November 2017</a></li>
+            </ul>
+            <!-- Archive Ends -->
+            <!-- Spacer Starts -->
+            <div class="spacer-extra-small"></div>
+            <!-- Spacer Ends -->
+            <!-- Keywords Starts -->
+            <h4 class="side-heading-2 text-brand-color">Keywords</h4>
+            <ul class="list-unstyled list-inline list-tag-1">
+                <li class="list-inline-item"><a href="#">Heart</a></li>
+                <li class="list-inline-item"><a href="#">Oral</a></li>
+                <li class="list-inline-item"><a href="#">Dental</a></li>
+                <li class="list-inline-item"><a href="#">Leaser</a></li>
+                <li class="list-inline-item"><a href="#">Cardiology</a></li>
+            </ul>
+            <!-- Keywords Ends -->
+        </div>*@
+        <!-- Sidearea Ends -->
+    </div>
+    <!-- Nested Row Ends -->
+</div>
+<!-- Main Container Ends -->
+
+@section scripts
+{
+    <script type="text/javascript">
+        // Change active nav link
+        $(document).ready(function () {
+            $('#news-nav-item').addClass('active');
+        });
+    </script>
+}

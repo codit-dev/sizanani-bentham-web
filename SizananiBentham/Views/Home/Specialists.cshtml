@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "Our Specialists";
+}
+
+@section header_content
+{
+    <!-- Page Heading Starts -->
+    <div class="container">
+        <h1 class="page-heading text-xs-center text-sm-center text-md-left">Our Specialists</h1>
+    </div>
+    <!-- Page Heading Ends -->
+}
+
+<!-- Breadcrumb Starts -->
+<div class="container">
+    <ol class="breadcrumb justify-content-center justify-content-md-start">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item active">Our Specialists</li>
+    </ol>
+</div>
+<!-- Breadcrumb Ends -->
+
+
+<div class="main-container-1 container">
+    <!-- Content Starts -->
+    <div class="content-1">
+        <p>Our specialist partners are just a phone call away. Contact us if you have any questions, or would like to make an appointment.</p>
+    </div>
+    <!-- Content Ends -->
+    <!-- Spacer Starts -->
+    <div class="spacer-extra-large"></div>
+    <!-- Spacer Ends -->
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Doctor</th>
+                <th>Specialisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C. Jack</td>
+                <td>Physician</td>
+            </tr>
+            <tr>
+                <td>K. Nyamande</td>
+                <td>Physician</td>
+            </tr>
+            <tr>
+                <td>I. Rambali</td>
+                <td>Physician</td>
+            </tr>
+            <tr>
+                <td>S.K. Mango</td>
+                <td>Surgeon</td>
+            </tr>
+            <tr>
+                <td>N. Lutchminarain</td>
+                <td>Surgeon</td>
+            </tr>
+            <tr>
+                <td>P.R. Mwangalawa</td>
+                <td>Orthopaedic Surgeon</td>
+            </tr>
+            <tr>
+                <td>S.N. Mvelase</td>
+                <td>Orthopaedic Surgeon</td>
+            </tr>
+            <tr>
+                <td>L. Mweli</td>
+                <td>Educational Psychologist</td>
+            </tr>
+            <tr>
+                <td>M. Mhlongo</td>
+                <td>Psychiatrist</td>
+            </tr>
+            <tr>
+                <td>K. Nene</td>
+                <td>Clinical Psychologist</td>
+            </tr>
+            <tr>
+                <td>N. Nyawose</td>
+                <td>Clinical Psychologist</td>
+            </tr>
+            <tr>
+                <td>C.M.L. Mogodi-Tjale</td>
+                <td>Consulting Clinical Psychologist</td>
+            </tr>
+            <tr>
+                <td>M.D. Mahabeer</td>
+                <td>ENT</td>
+            </tr>
+            <tr>
+                <td>Z.B. Khuzwayo</td>
+                <td>ENT</td>
+            </tr>
+            <tr>
+                <td>B.L. Singonya</td>
+                <td>ENT</td>
+            </tr>
+            <tr>
+                <td>T.B Buthelezi</td>
+                <td>Urologist</td>
+            </tr>
+            <tr>
+                <td>Y. Dassaye</td>
+                <td>Urologist</td>
+            </tr>
+            <tr>
+                <td>S.M. Cassim</td>
+                <td>Paediatrician</td>
+            </tr>
+            <tr>
+                <td>Z. Hlangu</td>
+                <td>Social Worker</td>
+            </tr>
+            <tr>
+                <td>B.B. Jiza</td>
+                <td>Paediatrician</td>
+            </tr>
+            <tr>
+                <td>E.I. Thompson</td>
+                <td>Paediatrician</td>
+            </tr>
+            <tr>
+                <td>A. Sayed</td>
+                <td>Paediatrician</td>
+            </tr>
+            <tr>
+                <td>C.F. Qoboshiyane</td>
+                <td>Opthalmologist</td>
+            </tr>
+            <tr>
+                <td>X.S. Mulonga</td>
+                <td>Opthalmologist</td>
+            </tr>
+            <tr>
+                <td>M. Gwavu</td>
+                <td>Opthalmologist</td>
+            </tr>
+            <tr>
+                <td>A.B. Chikosi</td>
+                <td>Gynaecologist</td>
+            </tr>
+            <tr>
+                <td>P.G. Karimi</td>
+                <td>Gynaecologist</td>
+            </tr>
+            <tr>
+                <td>M. Martin</td>
+                <td>Gynaecologist</td>
+            </tr>
+            @*<tr>
+                <td>C.D. Mashiloane</td>
+                <td>Gynaecologist</td>
+            </tr>*@
+            <tr>
+                <td>M.G. Mathebhere</td>
+                <td>Gynaecologist</td>
+            </tr>
+            <tr>
+                <td>N.F. Ngambu</td>
+                <td>Gynaecologist</td>
+            </tr>
+            <tr>
+                <td>D.W. Ngotho</td>
+                <td>Gynaecologist</td>
+            </tr>
+
+            @*<tr>
+                <td>G.N.K. Kamwaro</td>
+                <td>Gynaecologist</td>
+            </tr>*@
+            <tr>
+                <td>J. Bagrathee</td>
+                <td>Gynaecologist</td>
+            </tr>
+            <tr>
+                <td>G.M. Gitau</td>
+                <td>Gynaecologist</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        // Change active nav link
+        $(document).ready(function () {
+            $('#specialists-nav-item').addClass('active');
+        });
+    </script>
+}

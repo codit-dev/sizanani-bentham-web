@@ -1,0 +1,57 @@
+﻿<!-- Topbar Starts -->
+<div class="topbar d-xs-none d-sm-none d-lg-block">
+    <!-- Nested Container Starts -->
+    <div class="container clearfix text-xs-center text-sm-center text-md-left">
+        <p class="float-md-left">Opening Hours: Mon To Fri - 9:00 - 16:00</p>
+        <ul class="list-unstyled list-inline float-md-right text-md-right">
+            <li class="list-inline-item">
+                <a href="mailto:info@sizananibentham.co.za">
+                    <i class="fa fa-envelope-o"></i>info@sizananibentham.co.za
+                </a>
+            </li>
+            <li class="list-inline-item"><i class="fa fa-phone"></i>Call Us: +27 31 307 2073</li>
+        </ul>
+    </div>
+    <!-- Nested Container Ends -->
+</div>
+<!-- Topbar Ends -->
+<!-- Navbar Starts -->
+<nav id="nav" class="navbar navbar-expand-lg">
+    <!-- Nested Container Starts -->
+    <div class="container">
+        <!-- Navbar Brand & Toggler Starts -->
+        <a href="index.html" class="navbar-brand">
+            <img src="~/Content/images/logo.png" height="50" width="107" alt="Sizanani Bentham" class="img-fluid img-center-sm">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa fa-bars"></span>
+        </button>
+        <!-- Navbar Brand & Toggler Ends -->
+        <!-- Navbar Collapse Starts -->
+        <div class="navbar-collapse collapse">
+            <ul id="navbar" class="nav navbar-nav ml-auto">
+                <li id="home-nav-item" class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")">Home</a></li>
+                <li id="about-nav-item" class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        About
+                    </a>
+                    <ul class="dropdown-menu flat" role="menu">
+                        <a class="dropdown-item" href="@Url.Action("SizananiBentham","Home")">Sizanani Bentham</a>
+                        <a class="dropdown-item" href="@Url.Action("HealthUnit","Home")">Health Unit</a>
+                        <a class="dropdown-item" href="@Url.Action("ResearchUnit","Home")">Research Unit</a>
+                    </ul>
+                </li>
+                <li id="specialists-nav-item" class="nav-item"><a class="nav-link" href="@Url.Action("Specialists","Home")">Specialists</a></li>
+                <li id="news-nav-item" class="nav-item"><a class="nav-link" href="@Url.Action("Articles","News")">News</a></li>
+                <li id="contact-nav-item" class="nav-item"><a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Navbar Collapse Ends -->
+    </div>
+    <!-- Nested Container Ends -->
+</nav>
+<!-- Navbar Ends -->
+    
+
+
+

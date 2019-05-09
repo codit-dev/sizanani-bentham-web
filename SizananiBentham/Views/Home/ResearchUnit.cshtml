@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Research Unit";
+}
+
+@section header_content
+{
+    <!-- Page Heading Starts -->
+    <div class="container">
+        <h1 class="page-heading text-xs-center text-sm-center text-md-left">Research Unit</h1>
+    </div>
+    <!-- Page Heading Ends -->
+}
+
+<!-- Breadcrumb Starts -->
+<div class="container">
+    <ol class="breadcrumb justify-content-center justify-content-md-start">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item active">Research Unit</li>
+    </ol>
+</div>
+<!-- Breadcrumb Ends -->
+
+<!-- Main Container Starts -->
+<div class="main-container container text-xs-center text-sm-center text-md-left">
+    <!-- Home Welcome Section Starts -->
+    <section class="home-welcome-section">
+        <!-- Heading Starts -->
+        <h2 class="heading-1 text-xs-center text-sm-center text-md-left text-weight-light"><strong>Insight</strong> is the Vehicle for Change</h2>
+        <!-- Heading Ends -->
+        <!-- Spacer Starts -->
+        <div class="spacer-small"></div>
+        <!-- Spacer Ends -->
+        <!-- Nested Row Starts -->
+        <div class="row">
+            <!-- Welcome Content Starts -->
+            <div class="col-md-6 col-sm-12">
+                <div class="content-1">
+                    <p>This unit collects data from the administrative unit and does audits in order to share the information with medical professional societies or any group requiring the information and also to advise about any change in strategy. The information is to be presented at medical conferences. This unit also provides data to any third party who wants to undertake research. Informed consent is sought before any information is made available.</p>
+                </div>
+            </div>
+            <!-- Welcome Content Ends -->
+            <!-- Spacer For Mobile Starts -->
+            <div class="w-100 d-xs-block d-sm-block d-md-none">
+                <div class="spacer-extra-large"></div>
+            </div>
+            <!-- Spacer For Mobile Ends -->
+            <!-- Welcome Image Starts -->
+            <div style="text-align:center;" class="col-md-6 col-sm-12">
+                <img src="~/Content/images/about/research-unit.jpg" alt="Map" class="img-fluid img-center">
+            </div>
+            <!-- Welcome Image Ends -->
+        </div>
+        <!-- Nested Row Ends -->
+    </section>
+    <!-- Home Welcome Section Ends -->
+</div>
+<!-- Main Container Ends -->
+
+@section scripts
+{
+    <script type="text/javascript">
+        // Change active nav link
+        $(document).ready(function () {
+            $('#about-nav-item').addClass('active');
+        });
+    </script>
+}

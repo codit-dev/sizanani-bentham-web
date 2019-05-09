@@ -1,0 +1,130 @@
+﻿<!-- Footer Top Starts -->
+<div class="footer-top">
+    <!-- Nested Container Starts -->
+    <div class="container text-xs-center text-sm-center text-md-left">
+        <!-- Nested Row Starts -->
+        <div class="row">
+            <!-- Information Col Starts -->
+            <div class="col-lg-4 col-md-8 col-sm-12">
+                <!-- Title Starts -->
+                <h4 class="foot-heading">Information</h4>
+                <!-- Title Ends -->
+                <p>Should you have any questions, feel free to give us a call, send us an email, or drop by for a chat. Our door is always open.</p>
+                <ul class="list-unstyled address-list">
+                    <li class="clearfix address">
+                        <i class="fa fa-home"></i>
+                        Suite 1110 Durdoc Medical Centre, <br />460 Anton Lembede Street, Durban.
+                    </li>
+                    <li class="clearfix">
+                        <i class="fa fa-phone"></i>
+                        +27 31 307 2073
+                    </li>
+                    <li class="clearfix">
+                        <i class="fa fa-fax"></i>
+                        +27 31 307 7074
+                    </li>
+                    <li class="clearfix">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:info@sizananibentham.co.za">info@sizananibentham.co.za</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Information Col Ends -->
+            <!-- Services Col Starts -->
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <!-- Title Starts -->
+                <h4 class="foot-heading">Quick Links</h4>
+                <!-- Title Ends -->
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="@Url.Action("Index","Home")">
+                            <i class="fa fa-angle-right"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Specialists","Home")">
+                            <i class="fa fa-angle-right"></i>Specialists
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Articles","News")">
+                            <i class="fa fa-angle-right"></i>News and Publications
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact","Home")">
+                            <i class="fa fa-angle-right"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Services Col Ends -->
+            <!-- Twitter Col Starts -->
+            @*<div class="col-lg-3 col-md-5 col-sm-12">
+                <!-- Title Starts -->
+                <h4 class="foot-heading">Twitter</h4>
+                <!-- Title Ends -->
+                <ul class="list-unstyled tweets-list">
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        Our Hospitals Website Launched.
+                        <a href="#">http://t.co/xyz12abc</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        Our Hospitals Twitter Page, please follow.
+                        <a href="#">http://t.co/testlink</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        Our Hospitals Facebook Page, please like.
+                        <a href="#">http://t.co/abc123link</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        Our Hospitals Broucher Launched.
+                        <a href="#">http://t.co/xyz-test1</a>
+                    </li>
+                </ul>
+            </div>*@
+            <!-- Twitter Col Ends -->
+            <!-- Newsletter Col Starts -->
+            <div class="col-lg-5 col-sm-12 newsletter-block">
+                <!-- Title Starts -->
+                <h4 class="foot-heading">Our Newsletter</h4>
+                <!-- Title Ends -->
+                <form action="#" class="newsletter">
+                    <div class="form-group">
+                        <input type="text" class="form-control flat animation" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control flat animation" placeholder="Enter your Email Address">
+                    </div>
+                    <button type="submit" class="btn btn-block btn-main flat animation">Subscribe</button>
+                </form>
+            </div>
+            <!-- Newsletter Col Ends -->
+        </div>
+        <!-- Nested Row Ends -->
+    </div>
+    <!-- Nested Container Ends -->
+</div>
+<!-- Footer Top Ends -->
+<!-- Copyright Starts -->
+<footer class="copyright">
+    <!-- Nested Container Starts -->
+    <div class="container clearfix text-xs-center text-sm-center text-md-left">
+        <!-- Copyright Text Starts -->
+        <p class="float-md-left">&copy; Copyright @DateTime.Now.Year.ToString(). All Rights Reserved By <span>Sizanani Bentham</span></p>
+        <!-- Copyright Text Ends -->
+        <!-- Links Starts -->
+        <ul class="list-unstyled list-inline float-md-right text-md-right animation">
+            @*<li class="list-inline-item"><a href="#">Terms Of Services</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>*@
+            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+        </ul>
+        <!-- Links Ends -->
+    </div>
+    <!-- Nested Container Ends -->
+</footer>
+<!-- Copyright Ends -->

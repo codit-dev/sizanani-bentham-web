@@ -1,0 +1,152 @@
+﻿@using SizananiBentham.Models
+@model ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+@section header_content
+{
+    <!-- Page Heading Starts -->
+    <div class="container">
+        <h1 class="page-heading text-xs-center text-sm-center text-md-left">Contact Us</h1>
+    </div>
+    <!-- Page Heading Ends -->
+}
+
+<!-- Breadcrumb Starts -->
+<div class="container">
+    <ol class="breadcrumb justify-content-center justify-content-md-start">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item active">Contact Us</li>
+    </ol>
+</div>
+<!-- Breadcrumb Ends -->
+
+<!-- Spacer Starts -->
+<div class="spacer-extra-small"></div>
+<!-- Spacer Ends -->
+
+<!-- Main Container Starts -->
+<div class="main-container-1 container alt text-xs-center text-sm-center text-md-left">
+    <!-- Heading Starts -->
+    <h3 class="heading-1 text-xs-center text-sm-center text-md-left"><strong>Need Support?</strong></h3>
+    <p>Feel free to give us a call, send us an email, or drop by for a chat. Our door is always open.</p>
+    <!-- Heading Ends -->
+    <!-- Spacer Starts -->
+    <div class="spacer-extra-large"></div>
+    <!-- Spacer Ends -->
+    <!-- Nested Row Starts -->
+    <div class="row">
+        <!-- Mainarea Starts -->
+        <div class="col-lg-6 col-md-7 col-sm-12">
+            <div class="status alert alert-success contact-status"></div>
+            <!-- Contact Form Starts -->
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "contact-form", id = "main-contact-form", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <!-- Name Field Starts -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FromName, new { @class = "sr-only", @for = "name" })
+                    @Html.TextBoxFor(m => m.FromName, new { @class = "form-control flat", id = "name", placeholder = "Name *", required = "required", name = "name", type = "text" })
+                    @Html.ValidationMessageFor(m => m.FromName, null, new { @class = "text-danger" })
+                </div>
+                <!-- Name Field Ends -->
+                <!-- Email Field Starts -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FromEmail, new { @class = "sr-only", @for = "email" })
+                    @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control flat", id = "email", placeholder = "Email *", required = "required", name= "email", type = "email" })
+                    @Html.ValidationMessageFor(m => m.FromEmail, null, new { @class = "text-danger" })
+                </div>
+                <!-- Email Field Ends -->
+                <!-- Phone No Field Starts -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FromPhoneNumber, new { @class = "sr-only", @for = "phoneno" })
+                    @Html.TextBoxFor(m => m.FromPhoneNumber, new { @class = "form-control flat", id = "phoneno", placeholder = "Phone", name = "phoneno", type = "tel" })
+                    @Html.ValidationMessageFor(m => m.FromPhoneNumber, null, new { @class = "text-danger" })
+                </div>
+                <!-- Phone No Field Ends -->
+                <!-- Subject Field Starts -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Subject, new { @class = "sr-only", @for = "subject" })
+                    @Html.TextBoxFor(m => m.Subject, new { @class = "form-control flat", id = "subject", placeholder = "Subject *", required = "required", name = "subject", type = "text" })
+                    @Html.ValidationMessageFor(m => m.Subject, null, new { @class = "text-danger" })
+                </div>
+                <!-- Subject Field Ends -->
+                <!-- Message Field Starts -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Message, new { @class = "sr-only", @for = "message" })
+                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control flat", id = "message", placeholder = "Message *", rows = "6", required = "required" , name = "message"})
+                    @Html.ValidationMessageFor(m => m.Message, null, new { @class = "text-danger" })
+                </div>
+                <!-- Message Field Ends -->
+                <!-- Button Starts -->
+                <button type="submit" class="btn btn-main animation">Send Message</button>
+                <!-- Button Ends -->
+            }
+            <!-- Contact Form Ends -->
+        </div>
+        <!-- Mainarea Ends -->
+        <!-- Spacer For Mobile Starts -->
+        <div class="w-100 d-xs-block d-sm-block d-md-none">
+            <div class="spacer-extra-large"></div>
+        </div>
+        <!-- Spacer For Mobile Ends -->
+        <!-- Sidearea Starts -->
+        <div class="col-md-5 col-sm-12 offset-lg-1">
+            <!-- Address Starts -->
+            <h6 class="side-heading-1"><strong>Our Office in Durban</strong></h6>
+            <ul class="list-unstyled address-list">
+                <li><i class="fa fa-map-marker text-brand-color"></i>Suite 1110 Durdoc Medical Centre<br />460 Anton Lembede Street<br />Durban Central</li>
+                <li><i class="fa fa-phone text-brand-color"></i> +27 31 307 2073</li>
+                <li><i class="fa fa-envelope-o text-brand-color"></i> <a href="mailto:info@sizananibentham.co.za">info@sizananibentham.co.za</a></li>
+            </ul>
+        </div>
+        <!-- Sidearea Ends -->
+    </div>
+    <!-- Nested Row Ends -->
+</div>
+<!-- Main Container Ends -->
+<!-- Map Starts -->
+<div class="map"></div>
+<!-- Map Ends -->
+
+@section map_script
+{
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEuBUh24HYruZ2DCGmlfPxT402vO9js2Y&v=3&amp;sensor=false"></script>
+    <script>
+        (function ($) {
+
+            "use strict";
+
+            // GOOGLE MAP
+            $(".map").height(400);
+            function initialize($) {
+                var myLatlng = new google.maps.LatLng(-29.8603, 31.0172);
+                var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    disableDefaultUI: true
+                };
+                var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    title: "Sizanani Bentham"
+                });
+                // To add the marker to the map, call setMap();
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+        })(window.jQuery);
+    </script>
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+            // Change active nav link
+            $(document).ready(function () {
+                $('#contact-nav-item').addClass('active');
+            });
+    </script>
+}
